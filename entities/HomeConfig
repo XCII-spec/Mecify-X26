@@ -1,0 +1,72 @@
+{
+  "name": "HomeConfig",
+  "type": "object",
+  "properties": {
+    "theme": {
+      "type": "string",
+      "enum": [
+        "default",
+        "christmas",
+        "newyear",
+        "valentine",
+        "halloween",
+        "summer"
+      ],
+      "default": "default",
+      "description": "Th\u00e8me actif"
+    },
+    "hero_title": {
+      "type": "string",
+      "description": "Titre principal"
+    },
+    "hero_subtitle": {
+      "type": "string",
+      "description": "Sous-titre"
+    },
+    "hero_description": {
+      "type": "string",
+      "description": "Description"
+    },
+    "hero_image": {
+      "type": "string",
+      "description": "Image hero"
+    },
+    "background_color": {
+      "type": "string",
+      "description": "Couleur de fond"
+    },
+    "primary_color": {
+      "type": "string",
+      "description": "Couleur principale"
+    },
+    "features_visible": {
+      "type": "boolean",
+      "default": true,
+      "description": "Afficher les fonctionnalit\u00e9s"
+    },
+    "custom_message": {
+      "type": "string",
+      "description": "Message personnalis\u00e9"
+    },
+    "is_active": {
+      "type": "boolean",
+      "default": true,
+      "description": "Configuration active"
+    }
+  },
+  "required": [
+    "theme"
+  ],
+  "rls": {
+    "create": {
+      "$or": [
+        {
+          "created_by": "{{user.email}}"
+        },
+        {
+          "created_by": "{{user.email}}"
+        }
+      ]
+    }
+  }
+}

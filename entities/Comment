@@ -1,0 +1,40 @@
+{
+  "name": "Comment",
+  "type": "object",
+  "properties": {
+    "post_id": {
+      "type": "string",
+      "description": "ID du post"
+    },
+    "parent_id": {
+      "type": "string",
+      "description": "ID du commentaire parent (pour imbrication)"
+    },
+    "author_email": {
+      "type": "string",
+      "description": "Email de l'auteur"
+    },
+    "author_name": {
+      "type": "string",
+      "description": "Nom de l'auteur"
+    },
+    "content": {
+      "type": "string",
+      "description": "Contenu du commentaire"
+    },
+    "reactions": {
+      "type": "object",
+      "description": "R\u00e9actions par emoji"
+    },
+    "like_count": {
+      "type": "number",
+      "default": 0,
+      "description": "Nombre de likes"
+    }
+  },
+  "required": [
+    "post_id",
+    "author_email",
+    "content"
+  ]
+}

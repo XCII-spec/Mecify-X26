@@ -1,0 +1,89 @@
+{
+  "name": "Post",
+  "type": "object",
+  "properties": {
+    "community_id": {
+      "type": "string",
+      "description": "ID de la communaut\u00e9"
+    },
+    "author_email": {
+      "type": "string",
+      "description": "Email de l'auteur"
+    },
+    "author_name": {
+      "type": "string",
+      "description": "Nom de l'auteur"
+    },
+    "content": {
+      "type": "string",
+      "description": "Contenu du post"
+    },
+    "media_urls": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "URLs des images/vid\u00e9os"
+    },
+    "media_types": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Types de media (image/video)"
+    },
+    "link_url": {
+      "type": "string",
+      "description": "URL du lien externe"
+    },
+    "link_title": {
+      "type": "string",
+      "description": "Titre du lien"
+    },
+    "link_description": {
+      "type": "string",
+      "description": "Description du lien"
+    },
+    "link_image": {
+      "type": "string",
+      "description": "Image de pr\u00e9visualisation du lien"
+    },
+    "is_pinned": {
+      "type": "boolean",
+      "default": false,
+      "description": "Post \u00e9pingl\u00e9"
+    },
+    "is_announcement": {
+      "type": "boolean",
+      "default": false,
+      "description": "Annonce officielle"
+    },
+    "likes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Liste des emails qui ont lik\u00e9"
+    },
+    "like_count": {
+      "type": "number",
+      "default": 0,
+      "description": "Nombre de likes"
+    },
+    "comment_count": {
+      "type": "number",
+      "default": 0,
+      "description": "Nombre de commentaires"
+    },
+    "view_count": {
+      "type": "number",
+      "default": 0,
+      "description": "Nombre de vues"
+    }
+  },
+  "required": [
+    "community_id",
+    "author_email",
+    "content"
+  ]
+}

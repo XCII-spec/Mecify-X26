@@ -1,0 +1,78 @@
+{
+  "name": "Community",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Nom de la communaut\u00e9"
+    },
+    "description": {
+      "type": "string",
+      "description": "Description de la communaut\u00e9"
+    },
+    "image_url": {
+      "type": "string",
+      "description": "Image de couverture"
+    },
+    "creator_email": {
+      "type": "string",
+      "description": "Email du cr\u00e9ateur"
+    },
+    "creator_name": {
+      "type": "string",
+      "description": "Nom du cr\u00e9ateur"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "public",
+        "private",
+        "invitation"
+      ],
+      "default": "public",
+      "description": "Type de communaut\u00e9"
+    },
+    "members": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Liste des emails des membres"
+    },
+    "admins": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Liste des emails des admins"
+    },
+    "moderators": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Liste des emails des mod\u00e9rateurs"
+    },
+    "rules": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "R\u00e8gles de la communaut\u00e9"
+    },
+    "follower_count": {
+      "type": "number",
+      "default": 0,
+      "description": "Nombre de followers"
+    },
+    "post_count": {
+      "type": "number",
+      "default": 0,
+      "description": "Nombre de posts"
+    }
+  },
+  "required": [
+    "name",
+    "creator_email"
+  ]
+}

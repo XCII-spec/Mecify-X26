@@ -1,0 +1,57 @@
+{
+  "name": "Notification",
+  "type": "object",
+  "properties": {
+    "recipient_email": {
+      "type": "string",
+      "description": "Email du destinataire"
+    },
+    "sender_email": {
+      "type": "string",
+      "description": "Email de l'exp\u00e9diteur"
+    },
+    "sender_name": {
+      "type": "string",
+      "description": "Nom de l'exp\u00e9diteur"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "message",
+        "comment",
+        "like",
+        "follow",
+        "mention"
+      ],
+      "description": "Type de notification"
+    },
+    "content": {
+      "type": "string",
+      "description": "Contenu/aper\u00e7u"
+    },
+    "entity_id": {
+      "type": "string",
+      "description": "ID de l'entit\u00e9 li\u00e9e"
+    },
+    "is_read": {
+      "type": "boolean",
+      "default": false,
+      "description": "Lu ou non"
+    },
+    "priority": {
+      "type": "string",
+      "enum": [
+        "low",
+        "normal",
+        "high"
+      ],
+      "default": "normal",
+      "description": "Priorit\u00e9"
+    }
+  },
+  "required": [
+    "recipient_email",
+    "type",
+    "content"
+  ]
+}

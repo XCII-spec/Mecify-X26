@@ -1,0 +1,41 @@
+{
+  "name": "SubscriptionCode",
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "string",
+      "description": "Code d'abonnement unique"
+    },
+    "label": {
+      "type": "string",
+      "description": "Label/description du code"
+    },
+    "is_used": {
+      "type": "boolean",
+      "default": false,
+      "description": "Code d\u00e9j\u00e0 utilis\u00e9"
+    },
+    "used_by_email": {
+      "type": "string",
+      "description": "Email de l'utilisateur qui a utilis\u00e9 le code"
+    },
+    "used_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Date d'utilisation"
+    },
+    "expires_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Date d'expiration (optionnelle)"
+    },
+    "duration_days": {
+      "type": "number",
+      "description": "Dur\u00e9e de l'abonnement en jours (0 = illimit\u00e9)",
+      "default": 0
+    }
+  },
+  "required": [
+    "code"
+  ]
+}

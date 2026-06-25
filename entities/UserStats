@@ -1,0 +1,67 @@
+{
+  "name": "UserStats",
+  "type": "object",
+  "properties": {
+    "user_email": {
+      "type": "string",
+      "description": "Email de l'utilisateur"
+    },
+    "follower_count": {
+      "type": "number",
+      "default": 0,
+      "description": "Nombre de followers"
+    },
+    "following_count": {
+      "type": "number",
+      "default": 0,
+      "description": "Nombre de personnes suivies"
+    },
+    "total_likes": {
+      "type": "number",
+      "default": 0,
+      "description": "Total de likes re\u00e7us"
+    },
+    "total_views": {
+      "type": "number",
+      "default": 0,
+      "description": "Total de vues"
+    },
+    "total_posts": {
+      "type": "number",
+      "default": 0,
+      "description": "Nombre de posts"
+    },
+    "reputation_level": {
+      "type": "number",
+      "default": 1,
+      "description": "Niveau de r\u00e9putation"
+    },
+    "reputation_points": {
+      "type": "number",
+      "default": 0,
+      "description": "Points de r\u00e9putation"
+    },
+    "badge": {
+      "type": "string",
+      "enum": [
+        "none",
+        "bronze",
+        "silver",
+        "gold",
+        "diamond"
+      ],
+      "default": "none",
+      "description": "Badge du cr\u00e9ateur"
+    },
+    "achievements": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Liste des succ\u00e8s d\u00e9blocables"
+    }
+  },
+  "required": [
+    "user_email"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "name": "Follow",
+  "type": "object",
+  "properties": {
+    "follower_email": {
+      "type": "string",
+      "description": "Email du follower"
+    },
+    "following_email": {
+      "type": "string",
+      "description": "Email de la personne suivie"
+    },
+    "following_type": {
+      "type": "string",
+      "enum": [
+        "user",
+        "community"
+      ],
+      "description": "Type d'entit\u00e9 suivie"
+    },
+    "entity_id": {
+      "type": "string",
+      "description": "ID de l'entit\u00e9 suivie"
+    }
+  },
+  "required": [
+    "follower_email",
+    "following_type",
+    "entity_id"
+  ]
+}

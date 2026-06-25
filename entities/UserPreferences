@@ -1,0 +1,38 @@
+{
+  "name": "UserPreferences",
+  "type": "object",
+  "properties": {
+    "user_email": {
+      "type": "string",
+      "description": "Email de l'utilisateur"
+    },
+    "notifications_enabled": {
+      "type": "boolean",
+      "default": true,
+      "description": "Notifications activ\u00e9es"
+    },
+    "message_notifications": {
+      "type": "boolean",
+      "default": true,
+      "description": "Notifications de messages"
+    },
+    "community_notifications": {
+      "type": "boolean",
+      "default": true,
+      "description": "Notifications de communaut\u00e9s"
+    },
+    "show_online_status": {
+      "type": "boolean",
+      "default": true,
+      "description": "Afficher le statut en ligne"
+    },
+    "show_typing_indicator": {
+      "type": "boolean",
+      "default": true,
+      "description": "Afficher indicateur de saisie"
+    }
+  },
+  "required": [
+    "user_email"
+  ]
+}

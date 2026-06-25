@@ -1,0 +1,94 @@
+{
+  "name": "Message",
+  "type": "object",
+  "properties": {
+    "conversation_id": {
+      "type": "string",
+      "description": "ID of the conversation"
+    },
+    "sender_email": {
+      "type": "string",
+      "description": "Email of the sender"
+    },
+    "sender_name": {
+      "type": "string",
+      "description": "Name of the sender"
+    },
+    "content": {
+      "type": "string",
+      "description": "Message content"
+    },
+    "message_type": {
+      "type": "string",
+      "enum": [
+        "text",
+        "gif",
+        "image",
+        "file",
+        "pdf"
+      ],
+      "default": "text",
+      "description": "Type de message"
+    },
+    "file_url": {
+      "type": "string",
+      "description": "URL du fichier joint"
+    },
+    "file_name": {
+      "type": "string",
+      "description": "Nom du fichier"
+    },
+    "file_size": {
+      "type": "number",
+      "description": "Taille du fichier en octets"
+    },
+    "reactions": {
+      "type": "object",
+      "description": "R\u00e9actions par emoji: {emoji: [emails]}"
+    },
+    "read_by": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "List of emails who have read the message"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "sent",
+        "delivered",
+        "read"
+      ],
+      "default": "sent",
+      "description": "Message status"
+    },
+    "is_ai_message": {
+      "type": "boolean",
+      "default": false,
+      "description": "Message from AI agent"
+    },
+    "is_edited": {
+      "type": "boolean",
+      "default": false,
+      "description": "Message has been edited"
+    },
+    "reply_to_id": {
+      "type": "string",
+      "description": "ID du message auquel on r\u00e9pond"
+    },
+    "reply_to_content": {
+      "type": "string",
+      "description": "Aper\u00e7u du message cit\u00e9"
+    },
+    "reply_to_sender": {
+      "type": "string",
+      "description": "Nom de l'exp\u00e9diteur du message cit\u00e9"
+    }
+  },
+  "required": [
+    "conversation_id",
+    "content",
+    "sender_email"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "name": "CallSignal",
+  "type": "object",
+  "properties": {
+    "caller_email": {
+      "type": "string",
+      "description": "Email de l'appelant"
+    },
+    "receiver_email": {
+      "type": "string",
+      "description": "Email du destinataire"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "offer",
+        "answer",
+        "ice-candidate",
+        "end"
+      ],
+      "description": "Type de signal"
+    },
+    "call_type": {
+      "type": "string",
+      "enum": [
